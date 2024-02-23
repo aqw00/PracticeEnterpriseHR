@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/holiday', function(){
+    //return response('<h1>Hello World!</h1>');
+    return view('holiday');
+});
+
+Route::get('/man', function () {
+    return view('man');
+});
+
+Route::get('/posts/{id}', function($id){
+    return response('Post ' .$id);
+});
