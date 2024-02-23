@@ -47,13 +47,13 @@
         color: white;
         }
     </style>
-    <title>test</title>
+    <title>holiday</title>
 </head>
 <header>
 <div class="topnav">
   <a href="{{ url('/home') }}">Home</a>
   <a class="active" href="{{ url('/holiday') }}">Holiday</a>
-  <a href="#contact">Contact</a>
+  <a  href="{{ url('/man') }}">ManagerPage</a>
   <a href="#about">About</a>
 </div>
 </header>

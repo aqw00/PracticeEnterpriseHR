@@ -26,6 +26,10 @@ Route::get('/holiday', function(){
     return view('holiday');
 });
 
+Route::get('/man', function () {
+    return view('man');
+});
+
 Route::get('/posts/{id}', function($id){
     return response('Post ' .$id);
 });

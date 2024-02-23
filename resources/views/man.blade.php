@@ -29,17 +29,17 @@
         color: white;
         }
     </style>
-    <title>home</title>
+    <title>man</title>
 </head>
 <header>
 <div class="topnav">
-  <a class="active" href="{{ url('/home') }}">Home</a>
+  <a href="{{ url('/home') }}">Home</a>
   <a href="{{ url('/holiday') }}">Holiday</a>
-  <a  href="{{ url('/man') }}">ManagerPage</a>
+  <a  class="active" href="{{ url('/man') }}">ManagerPage</a>
   <a href="#about">About</a>
 </div>
 </header>
 <body>
-    <h1>Welcome Home!</h1>
+    <h1>Welcome manager!</h1>
 </body>
 </html>
