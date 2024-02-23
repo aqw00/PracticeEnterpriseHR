@@ -1,2 +1,2 @@
 # PracticeEnterpriseMeter
-Practice Enterprise ICT 2 group project (meter)
+Practice Enterprise ICT 2 group project (HR)
