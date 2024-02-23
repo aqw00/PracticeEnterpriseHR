@@ -17,7 +17,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-composer.json
-composer.lock
-config/app.php
-routes/web.php
