@@ -1,10 +1,11 @@
 <?php
-    if(isset($_GET['startDate']) && isset($_GET['endDate']) && isset($_GET['submit']))
+    if(isset($_GET['startDate']) && isset($_GET['endDate']) && isset($_GET['print']))
     {
         require_once 'C:\xampp\htdocs\PracticeEnterpriseHR\vendor\autoload.php';
         $pdfcontent = '<table class="form-data"><thead><tr> </tr></thead><tbody><tr><td>user</td></tr><tr><td>id</td></tr>';
         foreach($_GET as $key =>$value)
         {
+            if($key == 'submit' || $value == 'submit' || $key == 'print' || $value == 'print'){continue;}
             $pdfcontent .= "<tr><td>" . ucwords(str_replace("_", " ",$key)) . "</td>:<td>" . $value . "</td></tr>";
         }
         $pdfcontent .= "</tbody></table>";
@@ -17,6 +18,10 @@
         $_GET['startDate'] = '';
         $_GET['endDate'] = '';
         $_GET['holidayType'] = '';
+    }
+    elseif(isset($_GET['submit']))
+    {
+        echo 'hello';
     }
 
 ?>
@@ -84,6 +89,11 @@
                 </td>
                 <td>
                     <input type="file" id="file" name="file">
+                </td>
+            </tr>
+            <tr>
+                <td id="subHoliday">
+                    <button type="submit" value="print" name="print"> Download PDF </button>
                 </td>
             </tr>
             <tr>
