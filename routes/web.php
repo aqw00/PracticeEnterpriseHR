@@ -33,3 +33,7 @@ Route::get('/man', function () {
 Route::get('/posts/{id}', function($id){
     return response('Post ' .$id);
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+}) -> name('contact');
