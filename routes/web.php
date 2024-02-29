@@ -19,16 +19,16 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+}) -> name('home');
 
 Route::get('/holiday', function(){
     //return response('<h1>Hello World!</h1>');
     return view('holiday');
-});
+}) -> name('holiday');
 
 Route::get('/man', function () {
     return view('man');
-});
+}) -> name('man');
 
 Route::get('/posts/{id}', function($id){
     return response('Post ' .$id);

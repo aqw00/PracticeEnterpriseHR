@@ -1,6 +1,5 @@
 <?php
-
-    if(isset($_GET['startDate']) && isset($_GET['endDate']))
+    if(isset($_GET['startDate']) && isset($_GET['endDate']) && isset($_GET['submit']))
     {
         require_once 'C:\xampp\htdocs\PE-app\vendor\autoload.php';
         $pdfcontent = '<table class="form-data"><thead><tr> </tr></thead><tbody><tr><td>user</td></tr><tr><td>id</td></tr>';
@@ -12,6 +11,12 @@
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML(utf8_encode($pdfcontent));
         $mpdf->Output('formdata.pdf', 'D');
+    }
+    elseif(isset($_GET['cancel']))
+    {
+        $_GET['startDate'] = '';
+        $_GET['endDate'] = '';
+        $_GET['holidayType'] = '';
     }
 
 ?>
@@ -51,9 +56,9 @@
 </head>
 <header>
 <div class="topnav">
-  <a href="{{ url('/home') }}">Home</a>
-  <a class="active" href="{{ url('/holiday') }}">Holiday</a>
-  <a  href="{{ url('/man') }}">ManagerPage</a>
+  <a href="{{ route('home') }}">Home</a>
+  <a class="active" href="{{ route('holiday') }}">Holiday</a>
+  <a  href="{{ route('man') }}">ManagerPage</a>
   <a href="#about">About</a>
 </div>
 </header>
@@ -78,11 +83,40 @@
                 </td>
             </tr>
             <tr>
+                <td>
+                <label for="holiDays">Choose a type:</label>
+                </td>
+                <td>
+                    <select id="holiDays" name="holidayType" required>
+                    <option value="">Select</option>
+                    <option value="vacation">Vacation</option>
+                    <option value="sickLeave">Sick leave</option>
+                    <option value="parentalLeave">Parental leave</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="reason">Reason:</label>
+                </td>
+                <td>
+                    <textarea name="reason" id="reason" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="file">Select a file to upload:</label>
+                </td>
+                <td>
+                    <input type="file" id="file" name="file">
+                </td>
+            </tr>
+            <tr>
                 <td id="subHoliday">
-                    <button type="cancel" value="cancel" > cancel </button>
+                    <button type="cancel" value="cancel" name="cancel" > cancel </button>
                 </td>
                 <td id="subHoliday">
-                    <button type="submit" value="submit"> submit </button>
+                    <button type="submit" value="submit" name="submit"> submit </button>
                 </td>
             </tr>
         </form>
