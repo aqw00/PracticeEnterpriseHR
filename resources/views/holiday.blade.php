@@ -40,6 +40,7 @@
     <a href="{{ route('home') }}">Home</a>
     <a class="active" href="{{ route('holiday') }}">Holiday</a>
     <a  href="{{ route('man') }}">ManagerPage</a>
+    <a href="{{ url('/contact') }}">Contact</a>
     <a href="#about">About</a>
     </div>
     </header>

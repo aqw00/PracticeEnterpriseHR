@@ -12,6 +12,7 @@
     <a class="active" href="{{ url('/home') }}">Home</a>
     <a href="{{ url('/holiday') }}">Holiday</a>
     <a  href="{{ url('/man') }}">ManagerPage</a>
+    <a href="{{ url('/contact') }}">Contact</a>
     <a href="#about">About</a>
     </div>
     </header>
