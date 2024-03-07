@@ -1,0 +1,18 @@
+/*SLIDESHOW*/
+#slideshow
+{
+    height: 675px;
+    padding: 10px;
+    position: relative;
+    width: 900px;    
+}
+#slideshow > div
+{
+    position: absolute;
+}
+.slideImage
+{
+    border-radius: 40px;
+    height: auto;
+    width: 100%;
+}

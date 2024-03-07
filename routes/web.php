@@ -41,3 +41,7 @@ Route::get('/contact', function () {
 Route::get('/calendar', function () {
     return view('calendar');
 }) -> name('calendar');
+
+Route::get('/about', function () {
+    return view('about');
+}) -> name('about');

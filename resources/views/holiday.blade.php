@@ -41,7 +41,7 @@
     <a class="active" href="{{ route('holiday') }}">Holiday</a>
     <a  href="{{ route('man') }}">ManagerPage</a>
     <a href="{{ url('/contact') }}">Contact</a>
-    <a href="#about">About</a>
+    <a href="{{ url('/about') }}">About</a>
     </div>
     </header>
     <h1>Welcome to Holiday Page!</h1>

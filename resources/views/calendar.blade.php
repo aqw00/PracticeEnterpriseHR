@@ -35,7 +35,7 @@
             <a class="active " href="{{ route('calendar') }}">Calendar</a>
             <a  href="{{ route('man') }}">ManagerPage</a>
             <a href="{{ route('contact') }}">Contact</a>
-            <a href="#about">About</a>
+            <a href="{{ url('/about') }}">About</a>
         </div>
     </header>
     <h1>calendar test</h1>

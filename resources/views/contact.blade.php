@@ -48,7 +48,7 @@
                 <a href="{{ url('/holiday') }}">Holiday</a>
                 <a  href="{{ url('/man') }}">ManagerPage</a>
                 <a class="active" href="{{ url('/contact') }}">Contact</a>
-                <a href="#about">About</a>
+                <a href="{{ url('/about') }}">About</a>
             </div>
         </header>
 
