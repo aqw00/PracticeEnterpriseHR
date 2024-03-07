@@ -54,7 +54,7 @@
 
         <main>
             <h1>Contact Form</h1>
-            <p>Here you can ask us questions or leave comments/announcements.</p>
+            <p>This page is for employee contact. If Employees have questions then they can ask them here and they will be redirected to higher staff.</p>
 
             <form id="contactForm">
                 <div>
@@ -62,6 +62,7 @@
                     <select id="type" name="type">
                         <option value="Question">Question</option>
                         <option value="Comment">Comment</option>
+                        <option value="Request">Request</option>
                         <!-- Possible other names will be used for these categories-->
                     </select>
                 </div>
@@ -73,7 +74,7 @@
                 <label for="subject">Subject:</label>
                 <input type="text" id="subject" name="subject" required>
 
-                <label for="message">Question/Comment:</label>
+                <label for="message">Content:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
                 <div class="button-container">
@@ -92,7 +93,7 @@
                 var mailtoLink = 'mailto:hr@energyCompany.com';
 
                 var subject = "Employee " + type + " - " + subjectInput;
-                var emailBody = "Greetings HR,\n\n" + "text text text:\n" + message + "\n\n" + "Kind regards,\n" + email;
+                var emailBody = "Greetings HR,\n\n" + "Employee <employee_name> has submitted a " + type + ":\n" + message + "\n Date <date_of_request> - <time_of_request" + "\n\n" + "Kind regards,\n" + email;
                 // Body of email might be changed later on. different greetings, regards and content. It will make a contructed line that includes the date and time the request was posted etc.
 
                 mailtoLink += '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
