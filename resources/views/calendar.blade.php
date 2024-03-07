@@ -1,11 +1,15 @@
 <?php
     // Example function to handle AJAX request to update session
     // This is a simplified concept. You need an actual endpoint to process AJAX requests.
-    if (isset($_POST['action']) && isset($_POST['number'])) {
+    if (isset($_POST['action']) && isset($_POST['number'])) 
+    {
         $number = $_POST['number'];
-        if ($_POST['action'] == 'add') {
+        if ($_POST['action'] == 'add') 
+        {
             $_SESSION['addedCells'][$number] = true;
-        } elseif ($_POST['action'] == 'remove') {
+        } 
+        elseif ($_POST['action'] == 'remove') 
+        {
             unset($_SESSION['addedCells'][$number]);
         }
         // Send back a response if needed
@@ -36,30 +40,56 @@
     </header>
     <h1>calendar test</h1>
 
+    <div class="typeBar">
+        <table>
+            <tr>
+                <td>
+                    <button onclick="addDate()"><div class="square"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="addDate2()"><div class="square2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="addDate3()"><div class="square3"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <table id="calendar">
-            <?php
-    for ($row = 0; $row < 5; $row++) {
-        echo "<tr>";
-        for ($col = 1; $col <= 7; $col++) {
-            $number = $row * 7 + $col;
-            $class = isset($_SESSION['addedCells'][$number]) ? 'added' : '';
-            echo "<td class='{$class}'>{$number}</td>";
-        }
-        echo "</tr>";
-    }
-    ?>
+        <?php
+            for ($row = 0; $row < 5; $row++) 
+            {
+                echo "<tr>";
+                for ($col = 1; $col <= 7; $col++) 
+                {
+                    $number = $row * 7 + $col;
+                    $class = isset($_SESSION['addedCells'][$number]) ? 'added' : '';
+                    echo "<td class='{$class}'>{$number}</td>";
+                }
+                echo "</tr>";
+            }
+        ?>
     </table>
+
+    
 
     <div class="sidebar">
         <label id="label">This label is currently empty</label>
-        <button id="button" onclick="addDate()">Click Me</button>
+        <button id="button">Click Me</button>
     </div>
 
     <script>
-        function addDate() {
+        function addDate() 
+        {
             const selected = document.querySelector(".selected");
     
-            if (selected) {
+            if (selected) 
+            {
                 if (selected.classList.contains('added'))
                 {
                     selected.classList.remove("added");
@@ -73,9 +103,49 @@
                 selected.classList.remove("selected");
             }
         }
+        function addDate2() 
+        {
+            const selected = document.querySelector(".selected");
     
-        document.getElementById("calendar").addEventListener("click", function(e) {
-            if(e.target && e.target.nodeName === "TD") {
+            if (selected) 
+            {
+                if (selected.classList.contains('added2'))
+                {
+                    selected.classList.remove("added2");
+                    // updateSession(selected.textContent, 'remove');
+                }
+                else
+                {
+                    selected.classList.add("added2");
+                    // updateSession(selected.textContent, 'add');
+                }
+                selected.classList.remove("selected");
+            }
+        }
+        function addDate3() 
+        {
+            const selected = document.querySelector(".selected");
+    
+            if (selected) 
+            {
+                if (selected.classList.contains('added3'))
+                {
+                    selected.classList.remove("added3");
+                    // updateSession(selected.textContent, 'remove');
+                }
+                else
+                {
+                    selected.classList.add("added3");
+                    // updateSession(selected.textContent, 'add');
+                }
+                selected.classList.remove("selected3");
+            }
+        }
+    
+        document.getElementById("calendar").addEventListener("click", function(e) 
+        {
+            if(e.target && e.target.nodeName === "TD") 
+            {
                 // Remove previous selection and 'added' class from all cells
                 document.querySelectorAll("td").forEach(cell => {
                     cell.classList.remove("selected");
