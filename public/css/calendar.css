@@ -1,0 +1,26 @@
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  .side-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .side-content button {
+    margin-top: 20px;
+  }
+  .added {
+      background-color: rgb(4, 185, 22);
+    color: white;
+ }
+      .selected {
+        background-color: blue;
+        color: white;
+    }

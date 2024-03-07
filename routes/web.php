@@ -37,3 +37,7 @@ Route::get('/posts/{id}', function($id){
 Route::get('/contact', function () {
     return view('contact');
 }) -> name('contact');
+
+Route::get('/calendar', function () {
+    return view('calendar');
+}) -> name('calendar');
