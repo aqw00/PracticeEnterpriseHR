@@ -1,26 +1,74 @@
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 10px;
-    text-align: center;
-  }
-  .side-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  .side-content button {
-    margin-top: 20px;
-  }
-  .added {
-      background-color: rgb(4, 185, 22);
-    color: white;
- }
-      .selected {
-        background-color: blue;
-        color: white;
-    }
+table, th, td 
+{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td 
+{
+  padding: 10px;
+  text-align: center;
+}
+
+.side-content 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.side-content button 
+{
+  margin-top: 20px;
+}
+
+.added 
+{
+  background-color: rgb(4, 185, 22);
+  color: white;
+}
+.added2 
+{
+  background-color: purple;
+  color: white;
+}
+.added3
+{
+  background-color: pink;
+  color: white;
+}
+
+.selected 
+{
+  background-color: blue;
+  color: white;
+}
+
+.typeBar
+{
+  float:right;
+  margin-right: 75%;
+}
+
+.square 
+{
+  height: 50px;
+  width: 50px;
+  background-color: green;
+}
+
+.square2 
+{
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+}
+
+.square3 
+{
+  height: 50px;
+  width: 50px;
+  background-color: pink;
+}
